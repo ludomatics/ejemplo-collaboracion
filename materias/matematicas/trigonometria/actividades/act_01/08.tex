@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.8]
+  \draw
+  (3,0) coordinate (a) node[right] {$A$} --
+  (0,0) coordinate (o) node[left,above] {$O$} --
+  (0,-3) coordinate (b) node[below] {$B$};
+  \draw (o) -- (-20:3) coordinate (c) node[right] {$C$};
+  \draw (o) -- (-50:3) coordinate (d) node[right] {$D$};
+  \pic["$x$",draw=orange,->,angle eccentricity=1.7,angle radius=1cm] 
+    {angle=c--o--a};
+  \pic["$2x$",draw=orange,->,angle eccentricity=1.7,angle radius=1cm] 
+    {angle=d--o--c};
+  \pic["$3x$",draw=orange,->,angle eccentricity=1.7,angle radius=1cm] 
+    {angle=b--o--d};
+\end{tikzpicture}

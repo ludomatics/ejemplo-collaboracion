@@ -1,2 +1,186 @@
-contenido del archivoo
-Hola soy Rodrigo :), tengo 22 años
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+ twoside=false % Leer el main.tex de la carpeta example para más opciones
+]{kaobook}
+
+% Set the language
+\usepackage[spanish]{babel} % Load characters and hyphenation
+\decimalpoint%
+% \usepackage{adjustbox} % Para ajustar tablas
+\usepackage[export]{adjustbox}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+% Load packages for testing
+\usepackage{blindtext}
+
+% \usepackage{tikzit}
+\usetikzlibrary{babel}
+\usetikzlibrary{quotes,angles}
+
+% Load mathematical packages for theorems and related environments. 
+%NOTE: choose only one between 'mdftheorems' and 'plaintheorems'.
+\usepackage{styles/mdftheorems}
+%\usepackage{styles/plaintheorems}
+
+% Reset sidenote counter at chapters
+%\counterwithin*{sidenote}{chapter}
+
+\DeclareSymbolFont{yhlargesymbols}{OMX}{yhex}{m}{n}
+
+\DeclareMathAccent{\widetriangle}{\mathord}{yhlargesymbols}{"E6}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{Ludomatics}
+\SetWatermarkAngle{45}
+\SetWatermarkScale{0.5}
+\SetWatermarkColor[gray]{0.96}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	BOOK INFORMATION
+%----------------------------------------------------------------------------------------
+
+\titlehead{Guía para ingreso a nivel superior}
+\subject{Teoría y ejercicios}
+
+\title[Guía para examen de admisión a nivel superior]{Guía para examen de admisión a nivel superior}
+\subtitle{UNAM, IPN, UAM, ...}
+
+\author[Ludomatics]{Ludomatics \thanks{Una empresa comprometida con tu educación}}
+
+\date{\today}
+
+\publishers{Auto publicado}
+
+%----------------------------------------------------------------------------------------
+
+% \frontmatter % Denotes the start of the pre-document content, uses roman numerals
+
+%----------------------------------------------------------------------------------------
+%	OPENING PAGE
+%----------------------------------------------------------------------------------------
+
+%\makeatletter
+%\extratitle{
+%	% In the title page, the title is vspaced by 9.5\baselineskip
+%	\vspace*{9\baselineskip}
+%	\vspace*{\parskip}
+%	\begin{center}
+%		% In the title page, \huge is set after the komafont for title
+%		\usekomafont{title}\huge\@title
+%	\end{center}
+%}
+%\makeatother
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+% \makeatletter
+% \uppertitleback{\@titlehead} % Header
+
+% \lowertitleback{
+% 	\textbf{Disclaimer}\\
+% 	You can edit this page to suit your needs. For instance, here we have a no copyright statement, a colophon and some other information. This page is based on the corresponding page of Ken Arroyo Ohori's thesis, with minimal changes.
+	
+% 	\medskip
+	
+% 	\textbf{No copyright}\\
+% 	\cczero\ This book is released into the public domain using the CC0 code. To the extent possible under law, I waive all copyright and related or neighbouring rights to this work.
+	
+% 	To view a copy of the CC0 code, visit: \\\url{http://creativecommons.org/publicdomain/zero/1.0/}
+	
+% 	\medskip
+	
+% 	\textbf{Colophon} \\
+% 	This document was typeset with the help of \href{https://sourceforge.net/projects/koma-script/}{\KOMAScript} and \href{https://www.latex-project.org/}{\LaTeX} using the \href{https://github.com/fmarotta/kaobook/}{kaobook} class.
+	
+% 	The source code of this book is available at:\\\url{https://github.com/fmarotta/kaobook}
+	
+% 	(You are welcome to contribute!)
+	
+% 	\medskip
+	
+% 	\textbf{Publisher} \\
+% 	First printed in May 2019 by \@publishers
+% }
+% \makeatother
+
+
+%----------------------------------------------------------------------------------------
+%	OUTPUT TITLE PAGE AND PREVIOUS
+%----------------------------------------------------------------------------------------
+
+% Note that \maketitle outputs the pages before here
+
+% If twoside=false, \uppertitleback and \lowertitleback are not printed
+% To overcome this issue, we set twoside=semi just before printing the title pages, and set it back to false just after the title pages
+% \KOMAoptions{twoside=semi}
+% \maketitle
+% \KOMAoptions{twoside=false}
+
+%----------------------------------------------------------------------------------------
+%	MAIN BODY
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Denotes the start of the main document content, resets page numbering and uses arabic numbers
+\setchapterstyle{kao} % Choose the default chapter heading style
+
+\input{materias/matematicas/main}
+% \input{materias/espanol/main}
+% \input{materias/historiauniv/main}
+% \input{materias/historiamx/main}
+% \input{materias/geografia/main}
+% \input{materias/literatura/main}
+% \input{materias/quimica/main}
+% \input{materias/biologia/main}
+% \input{materias/filosofia/main}
+
+% \pagelayout{wide} % No margins
+% \addpart{Class Options, Commands and Environments}
+% \pagelayout{margin} % Restore margins
+
+% \input{chapters/options.tex}
+% \input{chapters/textnotes.tex}
+% \input{chapters/figsntabs.tex}
+% \input{chapters/references.tex}
+
+% \pagelayout{wide} % No margins
+% \addpart{Design and Additional Features}
+% \pagelayout{margin} % Restore margins
+
+% \input{chapters/layout.tex}
+% \input{chapters/mathematics.tex}
+
+% \appendix % From here onwards, chapters are numbered with letters, as is the appendix convention
+
+% \pagelayout{wide} % No margins
+% \addpart{Appendix}
+% \pagelayout{margin} % Restore margins
+
+% \input{chapters/appendix.tex}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BACK COVER
+%----------------------------------------------------------------------------------------
+
+% If you have a PDF/image file that you want to use as a back cover, uncomment the following lines
+
+%\clearpage
+%\thispagestyle{empty}
+%\null%
+%\clearpage
+%\includepdf{cover-back.pdf}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

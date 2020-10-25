@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.6]
+  \draw
+  (30:3) coordinate (c) node[right,above=1mm] {$C$} -- 
+  (0,0) coordinate (o) node[below] {$O$} -- 
+  (120:3) coordinate (d) node[above ] {$D$}
+  pic["$90^\circ$",draw=blue,->,angle eccentricity=1.6,angle radius=5mm] 
+    {angle=c--o--d};
+  \draw (o) -- (3,0) coordinate (a) node[right] {$A$};
+  \draw (o) -- (-3,0) coordinate (b) node[left] {$B$};
+  \pic["$\dfrac{-x+3^\circ}{6}$",draw=orange,->,angle eccentricity=2.4,angle radius=1cm] 
+    {angle=a--o--c};
+  \pic["$\dfrac{2x-3^\circ}{4}$",draw=orange,->,angle eccentricity=1.6,angle radius=1cm] 
+    {angle=d--o--b};
+\end{tikzpicture}	

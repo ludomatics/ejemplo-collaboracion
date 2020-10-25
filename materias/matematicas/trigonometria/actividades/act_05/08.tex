@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=0.5]
+  \coordinate (a) at (0,0) node[left] {$A$};
+  \coordinate (o1) at (4,0);
+  \coordinate (o2) at (8,0);
+  \coordinate (b) at (12,0);
+  \draw (a) -- (o1) -- (o2) -- (b) node[right] {$B$};
+  \draw (o1) -- +(120:3) coordinate (c) node[above] {$L1$};
+  \draw (o1) -- +(120:-3) coordinate (d);
+  \draw (o2) -- +(120:3) coordinate (e) node[above] {$L2$};
+  \draw (o2) -- +(120:-3) coordinate (f);
+  \pic["$x$",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=c--o1--a}; 
+  \pic["$\beta$",draw=orange,->,angle eccentricity=1.6,angle radius=5mm] 
+    {angle=a--o1--d};   
+  \pic["$\gamma$",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=d--o1--b}; 
+  \pic["$\delta$",draw=orange,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=b--o1--c};  
+  \pic["$\alpha'$",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=e--o2--a}; 
+  \pic["$\beta'$",draw=orange,->,angle eccentricity=1.6,angle radius=5mm] 
+    {angle=a--o2--f};   
+  \pic["$\gamma'$",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=f--o2--b}; 
+  \pic["$4x-30^\circ$",draw=orange,->,angle eccentricity=1.7,angle radius=5mm] 
+    {angle=b--o2--e};                          
+\end{tikzpicture}

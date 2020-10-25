@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\decimalpoint%
+\usepackage{anysize}
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\usetikzlibrary{quotes,angles}
+
+% Izquierda, derecha, arriba, abajo
+\marginsize{1cm}{1cm}{1cm}{4cm}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{fancyhdr} % Para agregar encabezado y pie de página
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+ \fancyhead[L]{% Left header
+    % Strut to ensure a 1/4 \baselineskip between image and header rule
+   \rule[-1.75\baselineskip]{0pt}{0pt}
+   \includegraphics[height=3.7\baselineskip,valign=c]{img/logo}% Image
+   \quad% Space
+ }
+
+
+\fancyhead[R]{
+  \begin{tabular}{r}
+    \textbf{Trigonometría} \\ \textit{Actividad 2}
+  \end{tabular}
+}
+
+\setlength{\headsep}{0.7in}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\large\bfseries}
+
+\usepackage{enumitem}
+
+\newcommand*\circitem[1]{%
+\begin{tikzpicture}[baseline=(C.base)]
+\node[draw,circle,inner sep=1pt,minimum size=3ex](C) {#1};
+\end{tikzpicture}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{ \Large{Curso de preparación UNAM} \\[2mm] 
+  \large{2020 - 2021}}	
+\end{center}
+
+\begin{flushleft}	
+  \textbf{Nombre: }
+  \line(1,0){326}\;\;
+  \textbf{Aciertos: }
+  \line(1,0){40}\\  
+\end{flushleft}	
+\noindent
+\textbf{Convertir los siguientes ángulos a radianes}
+\begin{multicols*}{2}
+  \begin{enumerate}[label=\Alph*.]
+    \setlength\itemsep{3.5cm}
+    \item $210^\circ$
+    \item $300^\circ$
+    \item $225^\circ$
+    \item $450^\circ$
+    \item $72^\circ$
+    \item $100^\circ$
+    \item $330^\circ$
+    \item $120^\circ$
+    \item $135^\circ$
+    \item $135^\circ$
+  \end{enumerate}
+\end{multicols*}
+\noindent
+\textbf{Convertir los siguientes ángulos a grados sexagesimales}
+\begin{multicols*}{2}
+  \begin{enumerate}[label=\Alph*.]
+    \setlength\itemsep{3.5cm}
+    \item $\dfrac{2}{3}\pi$
+    \item $\dfrac{11}{6}\pi$
+    \item $\dfrac{3}{4}\pi$
+    \item $\dfrac{4}{3}\pi$
+    \item $7 \pi$
+    \item $\dfrac{1}{9} \pi$
+    \item $\dfrac{13}{5} \pi$
+    \item $\dfrac{1}{12} \pi$
+    \item $\dfrac{5}{12} \pi$
+    \item $\dfrac{9}{6} \pi$
+  \end{enumerate}
+\end{multicols*}		
+
+\end{document}

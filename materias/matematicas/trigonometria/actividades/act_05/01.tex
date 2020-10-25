@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=0.7]
+  \coordinate (o) at (0,0);
+  \draw (o) -- (20:3) coordinate (a) node[right,above] {$A$};
+  \draw (o) -- (160:3) coordinate (b) node[left,above] {$B$};
+  \draw (o) -- (160:-3) coordinate (c) node[right,below] {$C$};
+  \draw (o) -- (20:-3) coordinate (d) node[left,below] {$D$};
+  \pic["$4x+34^\circ$'",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+  {angle=a--o--b};    
+  \pic["$\beta$",draw=orange,->,angle eccentricity=1.6,angle radius=5mm] 
+  {angle=b--o--d};  
+  \pic["$6x +12^\circ$'",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+  {angle=d--o--c};  
+  \pic["$\delta$",draw=orange,->,angle eccentricity=1.6,angle radius=5mm] 
+  {angle=c--o--a};        
+\end{tikzpicture}

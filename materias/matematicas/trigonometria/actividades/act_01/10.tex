@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.6]
+  \draw
+  (30:-3) coordinate (c) node[below=1mm] {$C$} -- 
+  (0,0) coordinate (o) node[below] {$O$} -- 
+  (150:-3) coordinate (d) node[below=1mm ] {$D$}
+  pic["$\dfrac{x}{2}$",draw=blue,->,angle eccentricity=1.9,angle radius=5mm] 
+    {angle=c--o--d};
+  \draw (o) -- (3,0) coordinate (a) node[right] {$A$};
+  \draw (o) -- (-3,0) coordinate (b) node[left] {$B$};
+  \pic["$\dfrac{x}{6}$",draw=orange,->,angle eccentricity=1.7,angle radius=1cm] 
+    {angle=b--o--c};
+  \pic["$\dfrac{x}{3}$",draw=orange,->,angle eccentricity=1.7,angle radius=1cm] 
+    {angle=d--o--a};
+\end{tikzpicture}

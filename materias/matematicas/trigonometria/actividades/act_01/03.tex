@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.6]
+  \coordinate (o) at (0,0);
+  \coordinate (a) at (3,0);
+  \coordinate (b) at (60:-3);
+  \draw (o) -- (a) node [right] {$A$};
+  \draw (o) -- (b) node [below]{$B$};
+  \pic["$3(2x-1^\circ)+21^\circ$",draw=orange,->,angle eccentricity=1.5,angle radius=0.8cm]
+    {angle=a--o--b};
+  \pic["$5(3x-2^\circ)+1^\circ$",draw=blue,->,angle eccentricity=1.5,angle radius=1cm]
+    {angle=b--o--a};
+\end{tikzpicture}

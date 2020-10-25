@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.6]
+  \draw
+  (0,0) coordinate (o) node[below] {$O$} -- 
+  (160:3) coordinate (d) node[above ] {$D$}
+  pic["$4x-10^\circ$",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=a--o--d};
+  \draw (o) -- (3,0) coordinate (a) node[right] {$A$};
+  \draw (o) -- (-3,0) coordinate (b) node[left] {$B$};
+  \pic["$x+15^\circ$",draw=orange,->,angle eccentricity=1.9,angle radius=1cm] 
+    {angle=d--o--b};
+\end{tikzpicture}	

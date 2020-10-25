@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.8]
+  \draw
+  (60:3) coordinate (c) node[right=2mm,above] {$C$} -- 
+  (0,0) coordinate (o) node[left] {$O$} -- 
+  (0,3) coordinate (b) node[above ] {$B$}
+  pic["\rotatebox{45}{$6x-3^\circ$}",draw=orange,->,angle eccentricity=1.5,angle radius=1.5cm] 
+    {angle=c--o--b};
+  \draw (o) -- (3,0) coordinate (a) node[right] {$A$};
+  \pic["$2x+5^\circ$",draw=orange,->,angle eccentricity=1.7,angle radius=1cm] 
+  {angle=a--o--c};
+\end{tikzpicture}

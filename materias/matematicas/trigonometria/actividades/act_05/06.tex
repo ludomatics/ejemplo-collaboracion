@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=0.5]
+  \draw (-3,0) coordinate (a) node[left] {$A$} -- 
+  (0,0) coordinate (o) -- 
+  (3,0) coordinate (b) node[right] {$B$};
+  \draw (140:2) coordinate (d) node[right]{$D$} -- 
+    (140:-6.5) coordinate (c) node[right,below] {$C$};
+  \pic["$\alpha$",draw=orange,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=b--o--d};
+  \pic["$\beta$",draw=blue,->,angle eccentricity=2,angle radius=5mm] 
+    {angle=d--o--a};   
+  \pic["$\gamma$",draw=orange,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=a--o--c};   
+  \pic["$2x$",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=c--o--b};        
+  % Parte de abajo    
+  \draw (0,-3) coordinate (a2) node[left] {$A'$} -- 
+  (3.5,-3) coordinate (o2) -- 
+  (5.5,-3) coordinate (b2) node[right] {$B'$};  
+  \pic["$x+60^\circ$'",draw=orange,->,angle eccentricity=1.6,angle radius=5mm] 
+    {angle=b2--o2--d}; 
+  \pic["$\beta$'",draw=blue,->,angle eccentricity=1.4,angle radius=5mm] 
+    {angle=d--o2--a2};   
+  \pic["$y-10^\circ$",draw=orange,->,angle eccentricity=1.6,angle radius=5mm] 
+    {angle=a2--o2--c};  
+  \pic["$\delta$'",draw=blue,->,angle eccentricity=1.5,angle radius=5mm] 
+    {angle=c--o2--b2};            
+\end{tikzpicture}  
