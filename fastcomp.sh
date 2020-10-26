@@ -6,4 +6,5 @@ fi
 # Compile document
 pdflatex -output-directory=.build/ main
 
-mv .build/*pdf ./universidad.pdf
+# Final PDF file name is apuntes.pdf
+mv .build/*pdf ./apuntes.pdf
